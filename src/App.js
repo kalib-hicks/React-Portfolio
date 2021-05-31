@@ -1,29 +1,20 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Footer from './components/Footer';
-import About from './components/About';
+import React from 'react';
 import Nav from './components/Nav';
-import Portfolio from './components/Portfolio';
+import About from './components/About';
+import Work from './components/Work';
 import Contact from './components/Contact';
-import Resume from './components/Resume';
-import './App.css';
-
+import Footer from './components/Footer';
 function App() {
   return (
-    <Router>
-      <div className="app">
-      <Nav />
-     <Switch>
-       <Route exact path='/' component={Home} />
-       <Route exact path='/about' component={About} />
-       <Route exact path='/portfolio' component={Portfolio} />
-       <Route exact path='/contact' component={Contact} />
-       <Route exact path='/resume' component={Resume} />
-     </Switch>
-     <Footer />
+    <div >
+      <Nav></Nav>
+      <main>
+        <About></About>
+        <Work></Work>
+        <Contact></Contact>
+        <Footer></Footer>
+      </main>
     </div>
-    </Router>
-    
   );
 }
 
